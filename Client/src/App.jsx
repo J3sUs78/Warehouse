@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/layout/Header'
 import Sidebar from './components/layout/Sidebar'
 import AppRoutes from './routes/AppRoutes'
+import { UserProvider } from './contexts/UserContext'
 
 
 
@@ -16,15 +17,17 @@ function App() {
   }
 
   return (
-    <Router>
-      <div className='grid-container'>
-        <Header OpenSidebar={OpenSidebar}/>
-        <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-        <main>
-          <AppRoutes />
-        </main>
-      </div>
-    </Router>
+    <UserProvider>
+      <Router>
+        <div className='grid-container'>
+          <Header OpenSidebar={OpenSidebar}/>
+          <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+          <main>
+            <AppRoutes />
+          </main>
+        </div>
+      </Router>
+    </UserProvider>
   )
 }
 

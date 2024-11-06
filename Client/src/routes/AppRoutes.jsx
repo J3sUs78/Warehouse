@@ -8,6 +8,9 @@ import Departments from '../components/pages/Departments';
 import Proccess from '../components/pages/Proccess';
 import { PageSection } from '../components/common/PageSection';
 import { ErrorPage } from '../components/common/ErrorPage';
+import Login from '../components/pages/Login';
+import Reports from '../components/pages/Reports';
+
 
 export function AppRoutes() {
     return (
@@ -19,7 +22,8 @@ export function AppRoutes() {
             <Route path="/categories" element={<Categories />} />
             <Route path="/departments" element={<Departments />} />
             <Route path="/process" element={<Proccess />} />
-            <Route path="/reports" element={<PageSection title="Reportes y Estadísticas" />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/reports" element={<Reports />} />
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     );

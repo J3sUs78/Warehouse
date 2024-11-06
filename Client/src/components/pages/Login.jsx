@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useUser } from '../../contexts/UserContext'; // Asegúrate de que esta importación sea correcta
-
+import '../../Login.css';
 const Login = () => {
     const { login } = useUser();
     const [username, setUsername] = useState('');
@@ -13,12 +13,11 @@ const Login = () => {
 
     return (
         <div className="background">
-            <div className="shape"></div>
-            <div className="shape"></div>
+
             <form onSubmit={handleSubmit}>
                 <h3>Iniciar Sesión</h3>
 
-                <label htmlFor="username">Usuario</label>
+                <label for="username">Usuario</label>
                 <input
                     type="text"
                     placeholder="Email o Teléfono"
@@ -28,7 +27,7 @@ const Login = () => {
                     required
                 />
 
-                <label htmlFor="password">Contraseña</label>
+                <label for="password">Contraseña</label>
                 <input
                     type="password"
                     placeholder="Contraseña"
@@ -39,10 +38,7 @@ const Login = () => {
                 />
 
                 <button type="submit">Iniciar Sesión</button>
-                <div className="social">
-                    <div className="go"><i className="fab fa-google"></i> Google</div>
-                    <div className="fb"><i className="fab fa-facebook"></i> Facebook</div>
-                </div>
+
             </form>
         </div>
     );

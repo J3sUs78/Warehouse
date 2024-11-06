@@ -17,7 +17,7 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <h3>Iniciar Sesión</h3>
 
-                <label for="username">Usuario</label>
+                <label htmlFor="username">Usuario</label>
                 <input
                     type="text"
                     placeholder="Email o Teléfono"
@@ -27,7 +27,7 @@ const Login = () => {
                     required
                 />
 
-                <label for="password">Contraseña</label>
+                <label htmlFor="password">Contraseña</label>
                 <input
                     type="password"
                     placeholder="Contraseña"

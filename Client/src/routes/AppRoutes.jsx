@@ -6,7 +6,7 @@ import Products from '../components/pages/Products';
 import Categories from '../components/pages/Categories';
 import Departments from '../components/pages/Departments';
 import Proccess from '../components/pages/Proccess';
-import { PageSection } from '../components/common/PageSection';
+import AdminRegister from '../components/pages/AdminRegister';
 import { ErrorPage } from '../components/common/ErrorPage';
 import Login from '../components/pages/Login';
 import Reports from '../components/pages/Reports';
@@ -24,6 +24,7 @@ export function AppRoutes() {
             <Route path="/process" element={<Proccess />} />
             <Route path="/login" element={<Login />} />
             <Route path="/reports" element={<Reports />} />
+            <Route path="/adminregister" element={<AdminRegister />} />
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     );
